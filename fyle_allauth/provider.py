@@ -23,7 +23,7 @@ class FyleProvider(OAuth2Provider):
         """
         Extracts the unique user ID from `data`
         """
-        return str(data['data'][0]['id'])
+        return str(data['data']['id'])
 
     def extract_common_fields(self, data):
         """
@@ -37,9 +37,9 @@ class FyleProvider(OAuth2Provider):
 
         :return: dictionary of key-value pairs.
         """
-        return dict(email=data['data'][0].get('employee_email'),
-                    username=data['data'][0].get('employee_email'),
-                    name=data['data'][0].get('full_name'))
+        return dict(email=data['data'].get('employee_email'),
+                    username=data['data'].get('employee_email'),
+                    name=data['data'].get('full_name'))
 
     def get_default_scope(self):
         """
