@@ -28,9 +28,10 @@ setup(
     include_package_data=True,
     install_requires=['Django >= 1.11', "django-allauth"],
     license='BSD License',  # example license
-    description="""Fyle OAuth2 provider for Django, lets you associate Fyle accounts with your User accounts.""",
+    description='Fyle OAuth2 provider for Django, lets you associate Fyle accounts with your User accounts.',
     long_description=README,
-    url='https://github.com/akshay-codemonk/fyle-django-allauth',
+    long_description_content_type="text/markdown",
+    url='https://github.com/fylein/fyle-django-allauth',
     author='akshay_codemonk',
     author_email='akshay@codemonk.in',
     classifiers=[
