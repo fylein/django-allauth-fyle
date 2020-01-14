@@ -5,6 +5,7 @@ from allauth.socialaccount.providers.oauth2.views import (
     OAuth2LoginView,
 )
 
+from .app_settings import BASE_URL
 from .provider import FyleProvider
 
 
@@ -13,11 +14,9 @@ class FyleOAuth2Adapter(OAuth2Adapter):
     Fyle OAuth2Adapter
     """
     provider_id = FyleProvider.id
-    web_url = 'https://staging.fyle.in'
-
-    access_token_url = '{0}/api/oauth/token'.format(web_url)
-    authorize_url = '{0}/app/main/#/oauth/authorize'.format(web_url)
-    profile_url = '{0}/api/tpa/v1/employees/my_profile'.format(web_url)
+    access_token_url = '{0}/api/oauth/token'.format(BASE_URL)
+    authorize_url = '{0}/app/main/#/oauth/authorize'.format(BASE_URL)
+    profile_url = '{0}/api/tpa/v1/employees/my_profile'.format(BASE_URL)
 
     def complete_login(self, request, app, token, **kwargs):
         """

@@ -137,4 +137,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-SOCIALACCOUNT_AUTO_SIGNUP=True
+SOCIALACCOUNT_AUTO_SIGNUP = True
+
+# If you are using a different application uncomment the below line and update your base URL
+# FYLE_BASE_URL = 'https://app.fyle.in'
