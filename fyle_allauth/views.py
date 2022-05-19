@@ -16,7 +16,7 @@ class FyleOAuth2Adapter(OAuth2Adapter):
     provider_id = FyleProvider.id
     access_token_url = '{0}/oauth/token'.format(BASE_URL)
     authorize_url = '{0}/app/developers/#/oauth/authorize'.format(BASE_URL)
-    profile_url = '{0}/api/tpa/v1/employees/my_profile'.format(BASE_URL)
+    profile_url = '{0}/platform/v1beta/spender/my_profile'.format(BASE_URL)
 
     def complete_login(self, request, app, token, **kwargs):
         """
